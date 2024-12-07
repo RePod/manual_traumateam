@@ -1,0 +1,15 @@
+{
+  "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.game.schema.json",
+  "game": "TraumaTeam",
+  "creator": "RePod",
+  "filler_item_name": "(filler)",
+  "starting_items": [
+      {
+          "item_categories": [
+              "Characters"
+          ],
+          "random": 0
+      }
+  ],
+  "death_link": true
+}

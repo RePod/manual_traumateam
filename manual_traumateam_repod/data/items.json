@@ -1,0 +1,100 @@
+{
+    "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.items.schema.json",
+    "data": [
+        { "name": "CR-S01", "category": ["Characters"], "progression": true },
+        { "name": "S-02", "category": ["Surgery - Unlock"], "progression": true },
+        { "name": "S-03", "category": ["Surgery - Unlock"], "progression": true },
+        { "name": "S-04", "category": ["Surgery - Unlock"], "progression": true },
+        { "name": "S-05", "category": ["Surgery - Unlock"], "progression": true },
+        { "name": "S-06", "category": ["Surgery - Unlock"], "progression": true },
+        { "name": "S-07", "category": ["Surgery - Unlock"], "progression": true },
+
+        { "name": "Maria", "category": ["Characters"], "progression": true },
+        { "name": "FR-02", "category": ["First Response - Unlock"], "progression": true },
+        { "name": "FR-03", "category": ["First Response - Unlock"], "progression": true },
+        { "name": "FR-04", "category": ["First Response - Unlock"], "progression": true },
+        { "name": "FR-05", "category": ["First Response - Unlock"], "progression": true },
+        { "name": "FR-06", "category": ["First Response - Unlock"], "progression": true },
+
+        { "name": "Hank", "category": ["Characters"], "progression": true },
+        { "name": "O-02", "category": ["Orthopedic - Unlock"], "progression": true },
+        { "name": "O-03", "category": ["Orthopedic - Unlock"], "progression": true },
+        { "name": "O-04", "category": ["Orthopedic - Unlock"], "progression": true },
+        { "name": "O-05", "category": ["Orthopedic - Unlock"], "progression": true },
+        { "name": "O-06", "category": ["Orthopedic - Unlock"], "progression": true },
+
+        { "name": "Tomoe", "category": ["Characters"], "progression": true },
+        { "name": "E-02", "category": ["Endoscopy - Unlock"], "progression": true },
+        { "name": "E-03", "category": ["Endoscopy - Unlock"], "progression": true },
+        { "name": "E-04", "category": ["Endoscopy - Unlock"], "progression": true },
+        { "name": "E-05", "category": ["Endoscopy - Unlock"], "progression": true },
+        { "name": "E-06", "category": ["Endoscopy - Unlock"], "progression": true },
+
+        { "name": "Gabriel", "category": ["Characters"], "progression": true },
+        { "name": "D-02", "category": ["Diagnostics - Unlock"], "progression": true },
+        { "name": "D-03", "category": ["Diagnostics - Unlock"], "progression": true },
+        { "name": "D-04", "category": ["Diagnostics - Unlock"], "progression": true },
+        { "name": "D-05", "category": ["Diagnostics - Unlock"], "progression": true },
+
+        { "name": "Naomi", "category": ["Characters"], "progression": true },
+        { "name": "F-02", "category": ["Forensics - Unlock"], "progression": true },
+        { "name": "F-03", "category": ["Forensics - Unlock"], "progression": true },
+        { "name": "F-04", "category": ["Forensics - Unlock"], "progression": true },
+        { "name": "F-05", "category": ["Forensics - Unlock"], "progression": true },
+        { "name": "F-06", "category": ["Forensics - Unlock"], "progression": true },
+
+        { "name": "Patient Zero", "category": ["Final - Unlock"], "progression": true },
+        { "name": "FINAL-02", "category": ["Final - Unlock"], "progression": true },
+        { "name": "FINAL-03", "category": ["Final - Unlock"], "progression": true },
+        { "name": "FINAL-04", "category": ["Final - Unlock"], "progression": true },
+        { "name": "FINAL-05", "category": ["Final - Unlock"], "progression": true },
+        { "name": "FINAL-06", "category": ["Final - Unlock"], "progression": true },
+        { "name": "FINAL-07", "category": ["Final - Unlock"], "progression": true },
+        { "name": "FINAL-08", "category": ["Final - Unlock"], "progression": true },
+        { "name": "FINAL-09", "category": ["Final - Unlock"], "progression": true },
+        { "name": "FINAL-10", "category": ["Final - Unlock"], "progression": true },
+        { "name": "FINAL-11", "category": ["Final - Unlock"], "progression": true },
+        { "name": "FINAL-12", "category": ["Final - Unlock"], "progression": true },
+
+
+
+
+
+        { "name":  "S Antibiotic Gel", "category":  ["Tools", "Surgery - Tools"], "progression": true},
+        { "name":  "S Progressive Syringe", "category":  ["Tools", "Surgery - Tools"], "progression": true},
+        { "name":  "S Sutures", "category":  ["Tools", "Surgery - Tools"], "progression": true},
+        { "name":  "S Drain", "category":  ["Tools", "Surgery - Tools"], "progression": true},
+        { "name":  "S Laser", "category":  ["Tools", "Surgery - Tools"], "progression": true},
+        { "name":  "S Ultrasound", "category":  ["Tools", "Surgery - Tools"], "progression": true},
+        { "name":  "S Scalpel", "category":  ["Tools", "Surgery - Tools"], "progression": true},
+        { "name":  "S Forceps", "category":  ["Tools", "Surgery - Tools"], "progression": true},
+
+        { "name":  "FR Antibiotic Gel", "category":  ["Tools", "First Response - Tools"], "progression": true},
+        { "name":  "FR Bandages", "category":  ["Tools", "First Response - Tools"], "progression": true},
+        { "name":  "FR Forceps", "category":  ["Tools", "First Response - Tools"], "progression": true},
+        { "name":  "FR Syringe", "category":  ["Tools", "First Response - Tools"], "progression": true},
+
+        { "name":  "Ortho HUH?", "category":  ["Tools", "Orthopedic - Tools"], "progression": true},
+
+        { "name":  "E Stabilizer", "category":  ["Tools", "Endoscopy - Tools"], "progression": true},
+        { "name":  "E Forceps", "category":  ["Tools", "Endoscopy - Tools"], "progression": true},
+        { "name":  "E Hemostatic Forceps", "category":  ["Tools", "Endoscopy - Tools"], "progression": true},
+        { "name":  "E Drain", "category":  ["Tools", "Endoscopy - Tools"], "progression": true},
+        { "name":  "E Syringe", "category":  ["Tools", "Endoscopy - Tools"], "progression": true},
+        { "name":  "E Snare", "category":  ["Tools", "Endoscopy - Tools"], "progression": true},
+        { "name":  "E Spray", "category":  ["Tools", "Endoscopy - Tools"], "progression": true},
+        { "name":  "E Scalpel", "category":  ["Tools", "Endoscopy - Tools"], "progression": true},
+
+        { "name":  "D RONI", "category":  ["Tools", "Diagnosis - Tools"], "progression": true},
+        { "name":  "D Stethoscope", "category":  ["Tools", "Diagnosis - Tools"], "progression": true},
+        { "name":  "D Diagnostic", "category":  ["Tools", "Diagnosis - Tools"], "progression": true},
+        { "name":  "D Image Analysis Lab", "category":  ["Tools", "Diagnosis - Tools"], "progression": true},
+
+        { "name":  "F Magnifying Glass", "category":  ["Tools", "Forensics - Tools"], "progression": true},
+        { "name":  "F ALS", "category":  ["Tools", "Forensics - Tools"], "progression": true},
+        { "name":  "F Powder", "category":  ["Tools", "Forensics - Tools"], "progression": true},
+        { "name":  "F Spray", "category":  ["Tools", "Forensics - Tools"], "progression": true},
+        { "name":  "F Recorder", "category":  ["Tools", "Forensics - Tools"], "progression": true},
+        { "name":  "F Little Guy", "category":  ["Tools", "Forensics - Tools"], "progression": true}
+    ]
+}
