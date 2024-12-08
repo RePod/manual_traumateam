@@ -7,7 +7,8 @@ on:
   workflow_dispatch:
 
 env:
-  WORLD_NAME: "manual_traumateam_repod"
+  WORLD_NAME_LOWER: "manual_traumateam_repod"
+  WORLD_NAME_PROPER: "Manual_TraumaTeam_RePod"
 
 jobs:
   unit:
@@ -43,12 +44,12 @@ jobs:
       - name: World | Symlink
         working-directory: /tmp/Archipelago
         run: |
-          ln -s $GITHUB_WORKSPACE/$WORLD_NAME ./worlds/$WORLD_NAME
+          ln -s $GITHUB_WORKSPACE/$WORLD_NAME ./worlds/$WORLD_NAME_LOWER
 
       - name: Python | Unittests
         working-directory: /tmp/Archipelago
         run: |
-          pytest test worlds/$WORLD_NAME
+          pytest test worlds/$WORLD_NAME_LOWER
 
       - name: World | Generate Template YAML
         working-directory: /tmp/Archipelago
@@ -58,8 +59,8 @@ jobs:
       - name: World | Zip
         working-directory: /tmp/Archipelago/worlds
         run: |
-          rm -rf ./$WORLD_NAME/__pycache__/ ./$WORLD_NAME/.idea/
-          7z a -tzip $WORLD_NAME.apworld $WORLD_NAME/
+          rm -rf ./$WORLD_NAME_LOWER/__pycache__/ ./$WORLD_NAME_LOWER/.idea/
+          7z a -tzip $WORLD_NAME_LOWER.apworld $WORLD_NAME_LOWER/
 
       - name: World | Release
         env:
@@ -73,5 +74,5 @@ jobs:
               --target=main \
               --generate-notes \
               --prerelease \
-              /tmp/Archipelago/worlds/$WORLD_NAME.apworld \
-              /tmp/Archipelago/players/Templates/$WORLD_NAME.yaml
+              /tmp/Archipelago/worlds/$WORLD_NAME_LOWER.apworld \
+              /tmp/Archipelago/Players/Templates/$WORLD_NAME_PROPER.yaml
