@@ -62,7 +62,6 @@ jobs:
           7z a -tzip $WORLD_NAME.apworld $WORLD_NAME/
 
       - name: World | Release
-        working-directory: /tmp/Archipelago
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -74,5 +73,5 @@ jobs:
               --target=main \
               --generate-notes \
               --prerelease \
-              ./worlds/$WORLD_NAME.apworld \
-              ./players/Templates/$WORLD_NAME.yaml
+              /tmp/Archipelago/worlds/$WORLD_NAME.apworld \
+              /tmp/Archipelago/players/Templates/$WORLD_NAME.yaml
