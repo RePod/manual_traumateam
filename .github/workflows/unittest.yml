@@ -20,26 +20,29 @@ jobs:
           python-version: '3.10'
 
       - name: Archipelago | Setup
+        working-directory: /tmp
         run: |
           wget -qnv -O - https://api.github.com/repos/ArchipelagoMW/Archipelago/releases |
             jq '.[0].tarball_url' |
-            xargs wget -nv -O /tmp/Archipelago.tar.gz
-          mkdir /tmp/Archipelago
-          tar xzf /tmp/Archipelago*.tar.gz -C /tmp/
-          mv /tmp/ArchipelagoMW-Archipelago* /tmp/Archipelago
-          cd /tmp/Archipelago
+            xargs wget -nv -O Archipelago.tar.gz
+          tar xzf Archipelago*.tar.gz
+          mv ArchipelagoMW-Archipelago* Archipelago
 
       - name: Python | Install dependencies
+        working-directory: /tmp/Archipelago
         run: |
+            cd /tmp/Archipelago
             python -m pip install --upgrade pip
             pip install pytest pytest-subtests pytest-xdist
             python ModuleUpdate.py --yes --force --append "WebHostLib/requirements.txt"
             python Launcher.py --update_settings
             
       - name: World | Symlink
+        working-directory: /tmp/Archipelago
         run: |
           ln -s $GITHUB_WORKSPACE/manual_traumateam_repod ./worlds/manual_traumateam_repod
 
       - name: Python | Unittests
+        working-directory: /tmp/Archipelago
         run: |
           pytest -n auto
