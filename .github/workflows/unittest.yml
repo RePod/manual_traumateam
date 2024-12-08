@@ -35,7 +35,7 @@ jobs:
       - name: World | Symlink
         working-directory: /tmp/Archipelago
         run: |
-          ln -s $GITHUB_WORKSPACE/$WORLD_NAME ./worlds/$WORLD_NAME_LOWER
+          ln -s $GITHUB_WORKSPACE/$WORLD_NAME_LOWER ./worlds/$WORLD_NAME_LOWER
 
       - name: Python | Install dependencies
         working-directory: /tmp/Archipelago
