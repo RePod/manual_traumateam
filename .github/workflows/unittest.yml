@@ -17,10 +17,10 @@ jobs:
       - uses: actions/checkout@v4
 
       # Please don't make me matrix
-      - name: Python | Set up 3.10
+      - name: Python | Set up 3.12
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.12'
 
       - name: Archipelago | Setup
         working-directory: /tmp
@@ -73,5 +73,6 @@ jobs:
               --title="$TITLE" \
               --target=main \
               --generate-notes \
+              --prerelease \
               ./worlds/$WORLD_NAME.apworld \
               ./players/Templates/$WORLD_NAME.yaml
