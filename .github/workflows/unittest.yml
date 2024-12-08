@@ -32,6 +32,11 @@ jobs:
           tar xzf Archipelago*.tar.gz
           mv ArchipelagoMW-Archipelago* Archipelago
 
+      - name: World | Symlink
+        working-directory: /tmp/Archipelago
+        run: |
+          ln -s $GITHUB_WORKSPACE/$WORLD_NAME ./worlds/$WORLD_NAME_LOWER
+
       - name: Python | Install dependencies
         working-directory: /tmp/Archipelago
         run: |
@@ -40,11 +45,6 @@ jobs:
             pip install pytest pytest-subtests pytest-xdist
             python ModuleUpdate.py --yes --force --append "WebHostLib/requirements.txt"
             python Launcher.py --update_settings
-            
-      - name: World | Symlink
-        working-directory: /tmp/Archipelago
-        run: |
-          ln -s $GITHUB_WORKSPACE/$WORLD_NAME ./worlds/$WORLD_NAME_LOWER
 
       #- name: Python | Unittests
       #  working-directory: /tmp/Archipelago
@@ -54,6 +54,7 @@ jobs:
       - name: World | Generate Template YAML
         working-directory: /tmp/Archipelago
         run: |
+          ls ./worlds
           python Launcher.py "Generate Template Options" 2>/dev/null
           ls ./Players/Templates
           
