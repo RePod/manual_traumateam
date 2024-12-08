@@ -40,7 +40,6 @@ jobs:
       - name: Python | Install dependencies
         working-directory: /tmp/Archipelago
         run: |
-            cd /tmp/Archipelago
             python -m pip install --upgrade pip
             pip install pytest pytest-subtests pytest-xdist
             python ModuleUpdate.py --yes --force --append "WebHostLib/requirements.txt"
@@ -55,7 +54,8 @@ jobs:
         working-directory: /tmp/Archipelago
         run: |
           ls ./worlds
-          python Launcher.py "Generate Template Options" 2>/dev/null
+          ls ./worlds/$WORLD_NAME_LOWER
+          python Launcher.py "Generate Template Options"
           ls ./Players/Templates
           
       - name: World | Zip
