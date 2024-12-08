@@ -8,6 +8,7 @@ on:
 
 env:
   WORLD_NAME: "manual_traumateam_repod"
+  WORLD_NAME_PROPER: "Manual_TraumaTeam_RePod"
 
 jobs:
   unit:
@@ -76,4 +77,4 @@ jobs:
               --generate-notes \
               --prerelease \
               /tmp/Archipelago/worlds/$WORLD_NAME.apworld \
-              /tmp/Archipelago/Players/Templates/$WORLD_NAME.yaml
+              /tmp/Archipelago/Players/Templates/$WORLD_NAME_PROPER.yaml
