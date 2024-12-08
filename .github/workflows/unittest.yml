@@ -45,4 +45,4 @@ jobs:
       - name: Python | Unittests
         working-directory: /tmp/Archipelago
         run: |
-          pytest -n auto
+          pytest test worlds/manual_traumateam_repod
