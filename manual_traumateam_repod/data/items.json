@@ -74,8 +74,6 @@
         { "name":  "FR Forceps", "category":  ["Tools", "First Response - Tools"], "progression": true},
         { "name":  "FR Syringe", "category":  ["Tools", "First Response - Tools"], "progression": true},
 
-        { "name":  "Ortho HUH?", "category":  ["Tools", "Orthopedic - Tools"], "progression": true},
-
         { "name":  "E Stabilizer", "category":  ["Tools", "Endoscopy - Tools"], "progression": true},
         { "name":  "E Forceps", "category":  ["Tools", "Endoscopy - Tools"], "progression": true},
         { "name":  "E Hemostatic Forceps", "category":  ["Tools", "Endoscopy - Tools"], "progression": true},

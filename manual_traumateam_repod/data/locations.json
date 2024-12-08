@@ -1,6 +1,8 @@
 {
     "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.locations.schema.json",
     "data": [
+        { "name": "Prologue" },
+
         { "name": "S-01", "category": ["Surgery - Operations"] },
         { "name": "S-02", "category": ["Surgery - Operations"], "requires": "|CR-S01| and |S-02|" },
         { "name": "S-03", "category": ["Surgery - Operations"], "requires": "|CR-S01| and |S-03|" },
@@ -47,7 +49,7 @@
         { "name": "F-04", "category": ["Forensics - Operations"], "requires": "|Naomi| and |F-04|" },
         { "name": "F-05", "category": ["Forensics - Operations"], "requires": "|Naomi| and |F-05|" },
         { "name": "F-06", "category": ["Forensics - Operations"], "requires": "|Naomi| and |F-06|" },
-        { "name": "F-07", "category": ["Forensics - Operations"], "requires": "|Naomi|s" },
+        { "name": "F-07", "category": ["Forensics - Operations"], "requires": "|Naomi|" },
 
         { "name": "Patient Zero", "category": ["Final"], "requires": "|Patient Zero|" },
         { "name": "FINAL-02", "category": ["Final"], "requires": "|Patient Zero| and |FINAL-02| and |Maria|" },
