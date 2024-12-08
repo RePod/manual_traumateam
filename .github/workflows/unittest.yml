@@ -45,18 +45,15 @@ jobs:
             python ModuleUpdate.py --yes --force --append "WebHostLib/requirements.txt"
             python Launcher.py --update_settings
 
-      #- name: Python | Unittests
-      #  working-directory: /tmp/Archipelago
-      #  run: |
-      #    pytest test worlds/$WORLD_NAME
+      - name: Python | Unittests
+        working-directory: /tmp/Archipelago
+        run: |
+          pytest test worlds/$WORLD_NAME
 
       - name: World | Generate Template YAML
         working-directory: /tmp/Archipelago
         run: |
-          ls ./worlds
-          ls ./worlds/$WORLD_NAME
           python Launcher.py "Generate Template Options"
-          ls ./Players/Templates
           
       - name: World | Zip
         working-directory: /tmp/Archipelago/worlds
