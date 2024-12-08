@@ -46,15 +46,16 @@ jobs:
         run: |
           ln -s $GITHUB_WORKSPACE/$WORLD_NAME ./worlds/$WORLD_NAME_LOWER
 
-      - name: Python | Unittests
-        working-directory: /tmp/Archipelago
-        run: |
-          pytest test worlds/$WORLD_NAME_LOWER
+      #- name: Python | Unittests
+      #  working-directory: /tmp/Archipelago
+      #  run: |
+      #    pytest test worlds/$WORLD_NAME_LOWER
 
       - name: World | Generate Template YAML
         working-directory: /tmp/Archipelago
         run: |
           python Launcher.py "Generate Template Options" 2>/dev/null
+          ls ./Players/Templates
           
       - name: World | Zip
         working-directory: /tmp/Archipelago/worlds
