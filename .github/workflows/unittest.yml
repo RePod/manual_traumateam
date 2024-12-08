@@ -6,6 +6,9 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
+env:
+  WORLD_NAME: "manual_traumateam_repod"
+
 jobs:
   unit:
     runs-on: ubuntu-latest
@@ -40,9 +43,35 @@ jobs:
       - name: World | Symlink
         working-directory: /tmp/Archipelago
         run: |
-          ln -s $GITHUB_WORKSPACE/manual_traumateam_repod ./worlds/manual_traumateam_repod
+          ln -s $GITHUB_WORKSPACE/$WORLD_NAME ./worlds/$WORLD_NAME
 
       - name: Python | Unittests
         working-directory: /tmp/Archipelago
         run: |
-          pytest test worlds/manual_traumateam_repod
+          pytest test worlds/$WORLD_NAME
+
+      - name: World | Generate Template YAML
+        working-directory: /tmp/Archipelago
+        run: |
+          python Launcher.py "Generate Template Options" 2>/dev/null
+          
+      - name: World | Zip
+        working-directory: /tmp/Archipelago/worlds
+        run: |
+          rm -rf ./$WORLD_NAME/__pycache__/ ./$WORLD_NAME/.idea/
+          7z a -tzip $WORLD_NAME.apworld $WORLD_NAME/
+
+      - name: World | Release
+        working-directory: /tmp/Archipelago
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE=$(date +"%y.%m.%d")
+          TAG=$(git rev-parse --short HEAD)
+          gh release create "${DATE}-${TAG}" \
+              --repo="$GITHUB_REPOSITORY" \
+              --title="$TITLE" \
+              --target=main \
+              --generate-notes \
+              ./worlds/$WORLD_NAME.apworld \
+              ./players/Templates/$WORLD_NAME.yaml
